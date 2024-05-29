@@ -14,8 +14,8 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-# Build the app
-RUN npm run build
-
+# Expose the port your app runs on
 EXPOSE 3000
-CMD ["node", "dist/index.js"]
+
+# Command to run the application
+CMD ["node", "index.js"]
